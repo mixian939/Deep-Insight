@@ -35,7 +35,7 @@ deep-insight-agent/
 ├── main.py                  # FastAPI 后端服务接口
 ├── requirements.txt         # 项目依赖包清单
 └── .gitignore               # Git 忽略文件配置
-
+```
 ## 📦 快速开始 (Quick Start)
 
 ### 1. 环境准备
@@ -49,21 +49,24 @@ python -m venv venv
 # Mac/Linux 激活: source venv/bin/activate
 
 pip install -r requirements.txt
+```
 
 ### 2：配置大模型 API Key
 系统默认使用智谱 GLM-4 模型。请在 core_agent.py 和 main.py 的顶部配置您的 API Key：
 
 ```Python
 my_api_key = "your_api_key_here"  # 替换为你的真实 Key
+```
 
 ### 3：构建本地向量知识库 (RAG 初始化)
 将目标企业的财报 PDF 放入 data/ 文件夹（重命名为 sample_report.pdf），并在终端运行数据处理脚本：
 
 ```Bash
 python build_knowledge.py
-注：脚本运行完毕后，项目根目录下会自动生成 faiss_index 文件夹，此时本地知识库构建完成。
+#注：脚本运行完毕后，项目根目录下会自动生成 faiss_index 文件夹，此时本地知识库构建完成。
+```
 
-###4：启动系统与测试
+### 4：启动系统与测试
 本项目提供两种运行方式：
 
 方式一：后端 API 模式（推荐）
@@ -72,9 +75,11 @@ python build_knowledge.py
 ```Bash
 （venv）uvicorn main:app --reload
 服务启动后，打开浏览器访问 http://127.0.0.1:8000/docs，即可在 Swagger UI 可视化界面中提交尽调任务并获取 JSON 报告。
+```
 
 方式二：终端调试模式
 如果你只想在命令行中查看多智能体的内部思考过程（并行检索、SQL 打印等）：
 
 ```Bash
 （venv）python -X utf8 core_agent.py
+```
