@@ -41,7 +41,7 @@ deep-insight-agent/
 ### 1. 环境准备
 克隆本项目并安装依赖：
 ```Bash
-git clone [https://github.com/你的用户名/deep-insight-agent.git](https://github.com/你的用户名/deep-insight-agent.git)
+git clone https://github.com/mixian939/deep-insight-agent.git
 cd deep-insight-agent
 python -m venv venv
 
