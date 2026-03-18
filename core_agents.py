@@ -17,7 +17,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from langchain_community.tools import DuckDuckGoSearchRun 
 
 # ==========================================
-# 0. 保持原本的数据库初始化 (略过细节，假装它存在)
+# 0. 保持原本的数据库初始化
 # ==========================================
 def init_financial_db():
     conn = sqlite3.connect('company_data.db')
