@@ -78,7 +78,7 @@ def read_root():
     return {"status": "系统运行正常，API 准备就绪"}
 
 # 核心工作流接口 (POST请求)
-@app.post("/api/research"
+@app.post(
     "/api/research", 
     summary=" 生成尽调报告", 
     description="传入具体的商业问题，系统将调度 LangGraph 多智能体工作流，结合 FAISS 向量库与智谱大模型，自动生成结构化分析报告。"
