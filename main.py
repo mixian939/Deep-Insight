@@ -96,7 +96,7 @@ def do_research(request: ResearchRequest):
     # 2. 触发 LangGraph 工作流干活
     final_state = agent_app.invoke(initial_state)
     
-    # 3. (可选进阶) 把这次的提问记录到 Redis 短期记忆里，保留 1 小时
+    # 3. 把这次的提问记录到 Redis 短期记忆里，保留 1 小时
     try:
         redis_client.set(f"last_query:{request.query}", final_state["draft"], ex=3600)
     except:
